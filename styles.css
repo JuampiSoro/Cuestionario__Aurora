@@ -1,0 +1,602 @@
+:root {
+  --negro: #171717;
+  --celeste: #00d6d9;
+  --violeta: #e300ff;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: var(--negro);
+  overflow: hidden;
+}
+
+.ocultar {
+  display: none;
+}
+
+.card {
+  background-color: rgb(29, 29, 29);
+  width: min(90%, 1000px);
+  margin-inline: auto;
+  margin-top: 1em;
+  padding-bottom: 1em;
+  border-radius: 10px;
+  box-shadow: 7px 5px 12px 2px rgba(0, 0, 0, 0.36);
+  -webkit-box-shadow: 7px 5px 12px 2px rgba(0, 0, 0, 0.36);
+  -moz-box-shadow: 7px 5px 12px 2px rgba(0, 0, 0, 0.36);
+  position: relative;
+}
+
+.nombre-final {
+  font-weight: 600;
+}
+
+.acertada {
+  color: #fff;
+  font-size: 100px;
+  font-weight: 700;
+}
+
+.card__background__desaprobado {
+  background-color: #f5576c;
+  border-radius: 3px;
+  box-shadow: 7px 5px 12px 2px rgba(0, 0, 0, 0.36);
+  padding: 4rem 4rem;
+  height: 12.5em;
+}
+
+.card__background--espacio {
+  padding: 3em 0em 0em 0em;
+}
+
+.card__title {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  font-size: 0.8em;
+  padding: 1em;
+  line-height: 1.2;
+}
+
+.logo {
+  width: 10em;
+  height: 7em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5em 0em 0em 0em;
+}
+
+.card__title--bienvenido {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  font-size: 2.2em;
+  padding: 0.3em 1.2em 0em 1.2em;
+  line-height: 1;
+}
+
+.card__p {
+  text-align: center;
+  font-family: "Work Sans", sans-serif;
+  color: white;
+  font-size: 1.2em;
+  padding: 1em 1.2em 1.2em 1.2em;
+  line-height: 1.2;
+}
+
+.card__p--dos {
+  text-align: center;
+  font-family: "Work Sans", sans-serif;
+  color: white;
+  font-size: 1.5em;
+  line-height: 1.2;
+}
+
+.center {
+  text-align: center;
+}
+
+.card__nombre {
+  margin: 0.5em 1em 1em 1em;
+  padding: 1em 1em 1em 0.2em;
+  font-size: 1.2em;
+  width: 13em;
+  border: none;
+  border-radius: 0.2em;
+}
+
+.card__nombre:focus {
+  outline: none;
+}
+
+.card__nombre[type="text"] {
+  font-family: "Work Sans", sans-serif;
+}
+
+.card__content {
+  position: relative;
+}
+
+img {
+  width: 13em;
+  display: block;
+  margin-inline: auto;
+  margin-bottom: 1em;
+  border-radius: 1em;
+}
+
+.card__form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3em;
+  width: 14em;
+  margin: 1em auto;
+}
+
+.options {
+  margin: 0.6em;
+  border: none;
+  text-align: left;
+  padding: 0.5em;
+  border-radius: 5px;
+  border-style: solid;
+  border-color: white;
+  background-color: var(--negro);
+  color: white;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  cursor: pointer;
+}
+
+.options input {
+  display: none;
+}
+
+.card__btn__section {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+.boton {
+  width: 10em;
+  height: 4em;
+  border: none;
+  border-radius: 10px;
+  background-color: #00c4ff;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 900;
+  color: white;
+  letter-spacing: 0.2em;
+  cursor: pointer;
+}
+
+.empezar {
+  width: 8em;
+  height: 4em;
+  font-size: 1.2em;
+}
+
+.final {
+  width: 8em;
+  height: 4em;
+  font-size: 1.2em;
+}
+
+.circle {
+  border: solid 0.7em var(--violeta);
+  width: 6em;
+  height: 6em;
+  border-radius: 50%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: fixed;
+  top: 30%;
+  right: 10%;
+  display: none;
+}
+
+.level {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-size: 2em;
+  color: var(--violeta);
+  display: none;
+}
+
+.card__p__final {
+  font-family: "Work Sans", sans-serif;
+  font-size: 1em;
+  color: white;
+  padding: 2em 2em 1em 2em;
+  line-height: 1.2em;
+}
+
+.card__btn__section__final {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.btns__finales {
+  margin: 0.5em 1em 0.2em 1em;
+}
+
+.final {
+  width: 9em;
+  height: 4em;
+  font-size: 1.2em;
+}
+
+.bg-btn-download {
+  background-color: var(--violeta);
+}
+
+.color {
+  color: var(--celeste);
+  font-weight: 600;
+}
+
+.link {
+  color: var(--violeta);
+  font-weight: 700;
+}
+
+.tu-puntaje-fue {
+  margin: 0% 5% 11% 0%;
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+.texto-final {
+  margin-top: 13%;
+  font-weight: 400;
+}
+
+@media (min-height: 700px) {
+  img {
+    width: 17em;
+    display: block;
+    margin-inline: auto;
+    margin-bottom: 1em;
+    border-radius: 1em;
+  }
+
+  .card__form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+    width: 18em;
+    margin: 1em auto;
+  }
+
+  .options {
+    margin: 0.7em;
+    border: none;
+    text-align: left;
+    padding: 1em;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: white;
+    background-color: var(--negro);
+    color: white;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 700;
+    font-size: 1em;
+    letter-spacing: 0.2em;
+  }
+
+  .card__btn__section {
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    text-align: center;
+  }
+
+  .card__background--espacio {
+    padding: 3em 0em 0em 0em;
+  }
+
+  .circle {
+    border: solid 0.7em var(--celeste);
+    width: 6em;
+    height: 6em;
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    top: 30%;
+    right: 10%;
+    display: none;
+  }
+
+  .level {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-size: 2em;
+    color: var(--celeste);
+    display: none;
+  }
+
+  .logo {
+    width: 12em;
+    height: 8em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5em 0em 0em 0em;
+  }
+
+  .card__title--bienvenido {
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    color: white;
+    font-size: 2.5em;
+    padding: 0.3em 1.2em 0em 1.2em;
+    line-height: 1.2;
+  }
+
+  .card__p {
+    text-align: center;
+    font-family: "Work Sans", sans-serif;
+    color: white;
+    font-size: 1.5em;
+    padding: 0.5em 1.2em 1.2em 1.2em;
+    line-height: 1.2;
+  }
+
+  .card__nombre {
+    margin: 0em 1em 1em 1em;
+    padding: 1em 1em 1em 0.2em;
+    font-size: 1.5em;
+    width: 10em;
+    border: none;
+    border-radius: 0.2em;
+  }
+
+  .empezar {
+    width: 10em;
+    height: 3em;
+    font-size: 1.5em;
+  }
+
+  .card__p__final {
+    font-family: "Work Sans", sans-serif;
+    font-size: 1.3em;
+    color: white;
+    padding: 2em 2em 1em 2em;
+    line-height: 1.2em;
+  }
+
+  .card__btn__section__final {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .btns__finales {
+    margin: 0.5em 1em 0.2em 1em;
+  }
+
+  .final {
+    width: 9em;
+    height: 4em;
+    font-size: 1.2em;
+  }
+
+  .card__background__desaprobado {
+    background-color: #f5576c;
+    border-radius: 3px;
+    box-shadow: 7px 5px 12px 2px rgba(0, 0, 0, 0.36);
+    padding: 2rem 4rem 4rem 4rem;
+    height: 9em;
+  }
+
+  .tu-puntaje-fue {
+    margin: 0% 5% 10% 0%;
+    font-weight: 300;
+    font-size: 1rem;
+  }
+
+  .texto-final {
+    margin-top: 10%;
+    font-weight: 400;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 2000px) {
+  .card {
+    width: min(95%, 1000px);
+    margin-inline: auto;
+    margin-top: 1em;
+    padding-bottom: 1em;
+    border-radius: 10px;
+    box-shadow: 7px 5px 12px 2px rgba(0, 0, 0, 0.36);
+    -webkit-box-shadow: 7px 5px 12px 2px rgba(0, 0, 0, 0.36);
+    -moz-box-shadow: 7px 5px 12px 2px rgba(0, 0, 0, 0.36);
+  }
+
+  .card__title {
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    color: white;
+    font-size: 0.8em;
+    padding: 3em;
+    line-height: 1.2;
+  }
+
+  .card__form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 35em;
+    margin: 2em auto;
+  }
+
+  img {
+    width: 20em;
+    height: 20em;
+    display: block;
+    margin-inline: auto;
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+    border-radius: 1em;
+    order: 2;
+  }
+
+  .options {
+    margin: 0.5em;
+    border: none;
+    text-align: left;
+    padding: 1em;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: white;
+    background-color: var(--negro);
+    color: white;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 700;
+    font-size: 1em;
+    letter-spacing: 0.2em;
+  }
+
+  .options input {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+  }
+
+  .circle {
+    border: solid 0.7em var(--celeste);
+    width: 6em;
+    height: 6em;
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 30%;
+    /* 21 */
+    right: 10%;
+  }
+
+  .level {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-size: 2em;
+    color: var(--celeste);
+    display: block;
+  }
+
+  .logo {
+    width: 13em;
+    height: 9em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5em 0em 0em 0em;
+  }
+
+  .card__title--bienvenido {
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    color: white;
+    font-size: 3.3em;
+    padding: 0.2em 1.2em 0em 1.2em;
+    line-height: 1;
+  }
+
+  .card__p {
+    text-align: center;
+    font-family: "Work Sans", sans-serif;
+    color: white;
+    font-size: 1.9em;
+    padding: 1em 1.2em 1.2em 1.2em;
+    line-height: 1.2;
+  }
+
+  .card__nombre {
+    margin: 0em 1em 1em 1em;
+    padding: 1em 1em 1em 0.2em;
+    font-size: 1.5em;
+    width: 13em;
+    border: none;
+    border-radius: 0.2em;
+  }
+
+  .empezar {
+    width: 10em;
+    height: 3em;
+    font-size: 1.5em;
+  }
+
+  .card__p__final {
+    font-family: "Work Sans", sans-serif;
+    font-size: 1.4em;
+    color: white;
+    padding: 1em 3em 1em 3em;
+    line-height: 1.2em;
+  }
+
+  .card__background--espacio {
+    padding: 3em 0em 0em 0em;
+  }
+
+  .card__btn__section__final {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .btns__finales {
+    margin: 1em;
+  }
+
+  .card__background__desaprobado {
+    background-color: #f5576c;
+    border-radius: 3px;
+    box-shadow: 7px 5px 12px 2px rgba(0, 0, 0, 0.36);
+    padding: 4rem 3.5rem;
+    height: 9em;
+  }
+
+  .tu-puntaje-fue {
+    margin: 0% 5% 4% 0%;
+    font-weight: 300;
+    font-size: 1rem;
+  }
+
+  .texto-final {
+    margin-top: 10%;
+    font-weight: 400;
+  }
+
+  .acertada {
+    color: #fff;
+    font-size: 120px;
+    font-weight: 700;
+  }
+}
+
+.hide {
+  display: none;
+}
+
+.see {
+  display: inline-block;
+}
+
+.seleccionado {
+  background-color: var(--violeta);
+}

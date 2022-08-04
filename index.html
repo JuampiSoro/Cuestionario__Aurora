@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cuestionario</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <section id="bienvenido" class="">
+    <div class="card">
+      <div class="center">
+        <img class="logo" src="imgs/AURORALOGO2022.png" alt="logo-aurora" />
+
+        <h1 class="card__title--bienvenido">BIENVENIDO.</h1>
+
+        <p class="card__p">
+          Si estas aca es porque estas interesado en probar tus capacidades
+          visuales. <br />
+          Lo que vas a ver a continuacion son 10 preguntas desarrolladas por
+          el equipo de cientificos de Aurora especializados en el campo
+          visual.
+        </p>
+
+        <form id="formNombre">
+          <input class="card__nombre" id="nombre" type="text" placeholder="Ingresá tu nombre" required />
+          <div class="card__btn__section">
+            <button class="boton empezar">EMPEZAR</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section id="preguntas" class="ocultar">
+    <div class="card">
+      <div class="card__title">
+        <h1 id="titulo"></h1>
+      </div>
+      <div class="card__content">
+        <img id="imagen" src="" alt="imagen-de-prueba" />
+
+        <div class="card__form" id="seleccion">
+          <button id="uno" class="options"></button>
+          <button id="dos" class="options"></button>
+          <button id="tres" class="options"></button>
+          <button id="cuatro" class="options"></button>
+        </div>
+      </div>
+
+      <div class="circle">
+        <span id="pregunta-actual" class="level">0/10</span>
+      </div>
+
+      <div class="card__btn__section">
+        <button id="boton-siguiente" class="boton ocultar">SIGUIENTE</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="final" class="ocultar">
+    <div class="card">
+      <div class="center">
+        <div class="card__p__final card__background__desaprobado card__background--espacio">
+          <p class="tu-puntaje-fue">Tu puntaje fue</p>
+          <span class="acertada" id="acertadas"></span>/100
+          <p class="texto-final">Lo lamentamos, tus <span style="font-weight: 600;">capacidades visuales</span> no están
+            del todo <span style="font-weight: 600;">desarrolladas</span>. 👀</p>
+        </div>
+        <p class="card__p__final">
+          Has sido invitado a <span class="color">“EXPERIENCIA AURORA”</span>,
+          una capacitación online para lograr desplegar todas tus aptitudes
+          visuales. <br />
+          Se recomienda asistir, este evento solo sucede una vez cada 10
+          años.<br />
+          Será el dia 87 de februbre, a las 35:97 Hs y se ingresa via
+          <a class="link" href="google.com"> este link.</a> <br />
+          Se ruega que vengan sin compañía.
+        </p>
+      </div>
+
+      <div class="card__btn__section__final">
+        <a href="imgs/AURORA-CITACION.pdf" download="imgs/AURORA-CITACION.pdf"><button
+            class="boton final btns__finales bg-btn-download">
+            DESCARGAR CITACIÓN
+          </button></a>
+        <!-- <button class="boton final btns__finales">WEB</button></a
+          > -->
+      </div>
+    </div>
+  </section>
+  <button id="ba" class="boton ocultar">Btn test</button>
+
+  <script src="index.js"></script>
+</body>
+
+</html>
